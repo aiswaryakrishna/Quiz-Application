@@ -1,5 +1,4 @@
 .question-wrapper {
-    /* background-image: url("../../../assets/quizImage.jpg"); */
     background: #d6ebf2;
     width: 100%;
     height: 100vh;
@@ -23,8 +22,8 @@
     background: rgb(233, 244, 245);
 }
 
-.options-style {
-    padding: 3%;
+.text-wrapper {
+    background: #d6ebf2;
 }
 
 .btn-wrapper {
@@ -32,15 +31,15 @@
 }
 
 .btn-style {
-    padding: 14px 33px;
+    padding: 10px 12px;
     border-radius: 10px;
     margin: 25px;
     border: none;
     background: #44c644;
     color: white;
     font-weight: 600;
-    font-size: 15px;
-    width: 130px;
+    font-size: 13px;
+    width: 100px;
     cursor: pointer;
     outline: none;
 }

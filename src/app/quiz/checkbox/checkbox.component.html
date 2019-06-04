@@ -1,0 +1,3 @@
+<div class="options-style" *ngFor="let option of questionInfo.options; trackBy: trackByFn; let i = index">
+    <input type="checkbox" name="option" [value]="i" [checked]="questionInfo.userResponse.includes(i)" (change)="onSelect(i)">{{ option }}
+</div>

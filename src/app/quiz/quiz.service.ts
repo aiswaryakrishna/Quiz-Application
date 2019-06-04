@@ -31,6 +31,19 @@ export class QuizService {
 
   getData() {
     return JSON.parse(localStorage.getItem('questionData'));
-    console.log(localStorage.getItem('questionData'));
+  }
+
+  markCalculation(questionData) {
+    this.mark = 0;
+    questionData.forEach(element => {
+        if(element.type == "text" && element.answer === element.userResponse.toLowerCase()) {
+          this.mark += 1;
+        } else if(element.userResponse && element.type == "checkbox" && element.answer.toString() === element.userResponse.sort().toString()) {
+          this.mark += 1;
+        } else if(element.answer === element.userResponse) {
+          this.mark += 1;
+        }
+    });
+    return this.mark;
   }
 }

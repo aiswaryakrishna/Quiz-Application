@@ -1,15 +1,15 @@
 [
     {
-        "question": "Which of the following is true about ng-init directive?",
+        "question": "Select angular directives",
         "options": [
-            "ng-init directive initializes an AngularJS Application data.",
-            "ng-init directive is used to put values to the variables to be used in the application.",
-            "Both of the above.",
-            "None of the above."
+            "ngFor",
+            "init",
+            "list",
+            "ngIf"
         ],
-        "type": "radio",
+        "type": "checkbox",
         "userResponse": "",
-        "answer": 2
+        "answer": [0,3]
     },
     {
         "question": "What is Model in MVC?",
@@ -90,12 +90,11 @@
         "answer": 3
     },
     {
-        "question": "AngularJS 2.0 is a?",
+        "question": "Angular is a?",
         "options": [
-            "library", "Framework", " Operating System", "programming Language"
         ],
-        "type": "radio",
+        "type": "text",
         "userResponse": "",
-        "answer": 0
+        "answer": "framework"
     }
 ]

@@ -1,0 +1,11 @@
+.text-align {
+    text-align: center;
+}
+
+.text-style {
+    height: 30px;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}

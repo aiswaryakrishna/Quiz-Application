@@ -1,0 +1,9 @@
+<!-- <div class="options-style" *ngFor="let option of questionData[counter]?.options; trackBy: trackByFn; let i = index">
+    <input class="options-style" [id]="i" type="radio" name="option" 
+    [(ngModel)]="questionData[counter].userResponse" [value]="i">{{ option }}
+</div> -->
+
+<div class="options-style" *ngFor="let option of questionInfo.options; trackBy: trackByFn; let i = index">
+    <input [id]="i" type="radio" name="option" [value]="i"
+    [(ngModel)]="questionInfo.userResponse">{{ option }}
+</div>

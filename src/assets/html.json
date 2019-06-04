@@ -24,16 +24,11 @@
         "answer": 2
     },
     {
-        "question": "Choose the correct HTML tag for the largest heading",
-        "options": [
-            "Head",
-            "H1",
-            "H6",
-            "Heading."
-        ],
-        "type": "radio",
+        "question": "Enter the correct HTML tag for the largest heading",
+        "options": [],
+        "type": "text",
         "userResponse": "",
-        "answer": 1
+        "answer": "h1"
     },
     {
         "question": "How do you change the left margin of an element?",
@@ -72,16 +67,16 @@
         "answer": 0
     },
     {
-        "question": "How can you make a list that lists the items with bullets?",
+        "question": "Select heading tags",
         "options": [
-            "Ol",
-            "Dl",
-            "Ul",
-            "List"
+            "h1",
+            "hd",
+            "head",
+            "h2"
         ],
-        "type": "radio",
+        "type": "checkbox",
         "userResponse": "",
-        "answer": 2
+        "answer": [0,3]
     },
     {
         "question": "What does CSS stand for?",
@@ -116,6 +111,7 @@
             "Font-size"
         ],
         "type": "radio",
+        "userResponse": "",
         "answer": 3
     }
 ]

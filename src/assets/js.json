@@ -48,28 +48,23 @@
         "answer": 2
     },
     {
-        "question": "What is the syntax for creating a function in JavaScript named as Geekfunc?",
+        "question": "Select Javascript frameworks",
         "options": [
-            "function = Geekfunc()",
-            "function Geekfunc()",
-            "function := Geekfunc()",
-            "function : Geekfunc()"
+            "React",
+            "JQuery",
+            "Angular",
+            "Bootstrap"
         ],
-        "type": "radio",
+        "type": "checkbox",
         "userResponse": "",
-        "answer": 1
+        "answer": [0, 1, 2, 3]
     },
     {
-        "question": "How is the function called in JavaScript?",
-        "options": [
-            "call Geekfunc()",
-            "call function GeekFunc()",
-            "Geekfunc()",
-            "function Geekfunc()"
-        ],
-        "type": "radio",
+        "question": "compilation of javascript to typescript is called",
+        "options": [],
+        "type": "text",
         "userResponse": "",
-        "answer": 2
+        "answer": "transpilation"
     },
     {
         "question": "What is the correct syntax for adding comments in JavaScript?",

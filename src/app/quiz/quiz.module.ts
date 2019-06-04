@@ -5,6 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { TopicsComponent } from './topics/topics.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RadioComponent } from './radio/radio.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { InputTextComponent } from './input-text/input-text.component';
 
 const routes: Routes = [
   { path: '', component: TopicsComponent },
@@ -13,10 +16,11 @@ const routes: Routes = [
   { path: 'js', component: QuestionsComponent },
   { path: 'js/:id', component: QuestionsComponent },
   { path: 'html', component: QuestionsComponent },
-  { path: 'html/:id', component: QuestionsComponent }]
+  { path: 'html/:id', component: QuestionsComponent },
+  { path: '**', component: TopicsComponent}]
 
 @NgModule({
-  declarations: [QuestionsComponent, TopicsComponent],
+  declarations: [QuestionsComponent, TopicsComponent, RadioComponent, CheckboxComponent, InputTextComponent],
   imports: [
     CommonModule,
     HttpClientModule,
