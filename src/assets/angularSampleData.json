@@ -1,0 +1,101 @@
+[
+    {
+        "question": "Which of the following is true about ng-init directive?",
+        "options": [
+            "ng-init directive initializes an AngularJS Application data.",
+            "ng-init directive is used to put values to the variables to be used in the application.",
+            "Both of the above.",
+            "None of the above."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "What is Model in MVC?",
+        "options": [
+            "Model represents server side data.",
+            "Model represents data stored in database.",
+            "Model is the lowest level of the pattern responsible for maintaining data.",
+            "None of the above."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "How angular.module works?",
+        "options": [
+            "angular.module is used to create AngularJS modules along with its dependent modules.",
+            "angular.module is primarily used to create application module.",
+            "Both of the above.",
+            "None of the above."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "Which file is responsible for startup of angular 2 project ?",
+        "options": [
+            "main.ts", "index.js", "app.ts", "angular.cli.json" 
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "What is the decorator used for configuring your module class?",
+        "options": [
+            "@NgModule", "@NgApp", "@NgAngular", "@NgConfigure"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "Interpolation in angular 2 is done using",
+        "options": [
+            "{{}}", "{{|var}}", "{{{}}}", "!!!!"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "Which character is used for chaining multiple pipes in Angular",
+        "options": [
+           ":", "-", ",", "|"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 3
+    },
+    {
+        "question": "Which of the following filter is used to convert input to all uppercase?",
+        "options": [
+            "upper", "uppercase", "toUpper", "none of the above"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    },
+    {
+        "question": "Which of the following is not a hook in Angular application life cycle.",
+        "options": [
+            "ngOnChanges", "ngOnInit", "ngAfterViewInit", "ngViewStart"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 3
+    },
+    {
+        "question": "AngularJS 2.0 is a?",
+        "options": [
+            "library", "Framework", " Operating System", "programming Language"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    }
+]

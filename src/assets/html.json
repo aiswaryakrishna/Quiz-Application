@@ -1,0 +1,121 @@
+[
+    {
+        "question": "What does HTML stand for?",
+        "options": [
+            "Hyper Text Markup Language",
+            "Home Tool Markup Language",
+            "Hyperlinks and Text Markup Language.",
+            "None of the above."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "Who is making the Web standards?",
+        "options": [
+            "Mozilla",
+            "Microsoft",
+            "The World Wide Web Consortium",
+            "None of the above."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "Choose the correct HTML tag for the largest heading",
+        "options": [
+            "Head",
+            "H1",
+            "H6",
+            "Heading."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    },
+    {
+        "question": "How do you change the left margin of an element?",
+        "options": [
+            "Margin-left",
+            "Text-indent",
+            "Margin",
+            "Indent."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "Choose the correct HTML tag to make a text bold",
+        "options": [
+            "bold",
+            "b",
+            "bb",
+            "bd."
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    },
+    {
+        "question": "How can you make a list that lists the items with numbers?",
+        "options": [
+            "Ol",
+            "Dl",
+            "Ul",
+            "List"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "How can you make a list that lists the items with bullets?",
+        "options": [
+            "Ol",
+            "Dl",
+            "Ul",
+            "List"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "What does CSS stand for?",
+        "options": [
+            "Creative Style Sheets",
+            "Colorful Style Sheets",
+            "Computer Style Sheets",
+            "Cascading Style Sheets"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 3
+    },
+    {
+        "question": "Which is the correct CSS syntax?",
+        "options": [
+            "Body:color=black",
+            "{body;color:black}",
+            "{body:color=black(body}",
+            "Body {color: black}"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 3
+    },
+    {
+        "question": "Which CSS property controls the text size?",
+        "options": [
+            "Font-style",
+            "Text-style",
+            "text-size text-size",
+            "Font-size"
+        ],
+        "type": "radio",
+        "answer": 3
+    }
+]

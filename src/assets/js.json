@@ -1,0 +1,122 @@
+[
+    {
+        "question": "What is the HTML tag under which one can write the JavaScript code?",
+        "options": [
+            " <javascript>",
+            "<scripted>",
+            "<script>",
+            "<js>"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    }, 
+    {
+        "question": "Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
+        "options": [
+            "alertbox(“GeeksforGeeks”);",
+            "msg(“GeeksforGeeks”)",
+            "msgbox(“GeeksforGeeks”)",
+            "alert(“GeeksforGeeks”)"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 3
+    },
+    {
+        "question": "What is the correct syntax for referring to an external script called “geek.js”?",
+        "options": [
+            "<script src=”geek.js”>",
+            "<script href=”geek.js”>",
+            "<script ref=”geek.js”>",
+            "<script name=”geek.js”>"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 0
+    },
+    {
+        "question": "Which of the following is not a reserved word in JavaScript?",
+        "options": [
+            "interface",
+            "throws",
+            "program",
+            "short"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "What is the syntax for creating a function in JavaScript named as Geekfunc?",
+        "options": [
+            "function = Geekfunc()",
+            "function Geekfunc()",
+            "function := Geekfunc()",
+            "function : Geekfunc()"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    },
+    {
+        "question": "How is the function called in JavaScript?",
+        "options": [
+            "call Geekfunc()",
+            "call function GeekFunc()",
+            "Geekfunc()",
+            "function Geekfunc()"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": "What is the correct syntax for adding comments in JavaScript?",
+        "options": [
+            "<!–This is a comment–&gt",
+            "//This is a comment",
+            "–This is a comment",
+            "**This is a comment**"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    },
+    {
+        "question": "What is the JavaScript syntax for printing values in Console?",
+        "options": [
+            "print(5)",
+            "console.log(5)",
+            "console.print(5)",
+            "print.console(5)"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    },
+    {
+        "question": "What will be the command to print the number of characters in the string “GeeksforGeeks”?",
+        "options": [
+            "document.write(“GeeksforGeeks”.len);",
+            "document.write(sizeof(“GeeksforGeeks”));",
+            "document.write(“GeeksforGeeks”.length)",
+            "document.write(lenof(“GeeksforGeeks”));"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 2
+    },
+    {
+        "question": " What is the method in JavaScript used to remove the whitespace at the beginning and end of any string ?",
+        "options": [
+            "strip()",
+            "trim()",
+            "stripped()",
+            "trimmed()"
+        ],
+        "type": "radio",
+        "userResponse": "",
+        "answer": 1
+    }
+]
