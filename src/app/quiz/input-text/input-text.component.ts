@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { questionDataInterface } from 'src/app/config/interfaces';
 
 @Component({
   selector: 'input-text',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./input-text.component.css']
 })
 export class InputTextComponent implements OnInit {
-  @Input() questionInfo: any;
+  @Input() questionInfo: questionDataInterface;
 
   constructor() { }
 

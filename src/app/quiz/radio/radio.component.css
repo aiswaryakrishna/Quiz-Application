@@ -1,3 +1,14 @@
-.options-style {
-    padding: 3%;
+@import '../../../assets/common.css';
+
+.checkmark {
+    border-radius: 50%;
+}
+
+.container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { questionDataInterface } from 'src/app/config/interfaces';
 
 @Component({
   selector: 'checkbox-type',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./checkbox.component.css']
 })
 export class CheckboxComponent implements OnInit {
-  @Input() questionInfo: any;
+  @Input() questionInfo: questionDataInterface;
   itemArray: Array<number> = [];
 
   constructor() { }
@@ -15,8 +16,12 @@ export class CheckboxComponent implements OnInit {
   }
 
   onSelect(value) {
-    this.itemArray.push(value);
-    this.questionInfo.userResponse = this.itemArray;
-    // this.questionInfo.userResponse = JSON.stringify(this.questionInfo.userResponse);
+    if(this.itemArray.indexOf(value) == -1) {
+      this.itemArray.push(value);
+      this.questionInfo.userResponse = this.itemArray;
+    } else {
+      this.itemArray.splice(this.itemArray.indexOf(value), 1);
+      this.questionInfo.userResponse = this.itemArray;
+    }
   }
 }

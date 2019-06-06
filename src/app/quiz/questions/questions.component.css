@@ -30,20 +30,6 @@
     text-align: center;
 }
 
-.btn-style {
-    padding: 10px 12px;
-    border-radius: 10px;
-    margin: 25px;
-    border: none;
-    background: #44c644;
-    color: white;
-    font-weight: 600;
-    font-size: 13px;
-    width: 100px;
-    cursor: pointer;
-    outline: none;
-}
-
 .score-box {
     width: 450px;
     height: 250px;
@@ -65,4 +51,8 @@
 
 .right-align {
     float: right;
+}
+.btn {
+    margin: 15px;
+    width: 100px;
 }

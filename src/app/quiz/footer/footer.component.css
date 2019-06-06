@@ -1,0 +1,13 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #d5d2d2;
+    color: #433434;
+    text-align: center;
+}
+
+.footer-top-space {
+    padding-top: 15px;
+}

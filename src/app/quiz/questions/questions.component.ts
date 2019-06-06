@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { htmlAstToRender3Ast } from '@angular/compiler/src/render3/r3_template_transform';
+import { questionDataInterface } from '../../config/interfaces';
 
 @Component({
   selector: 'app-quiz',
@@ -9,10 +10,10 @@ import { htmlAstToRender3Ast } from '@angular/compiler/src/render3/r3_template_t
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {
-  public questionData: Array<any> = [];
+  public questionData: Array<questionDataInterface> = [];
   counter: number;
   question: string;
-  options: Array<any> = [];
+  options: Array<string> = [];
   answer: number;
   mark: number;
   routerUrl: string;
@@ -28,7 +29,7 @@ export class QuestionsComponent implements OnInit {
   ngOnInit() {
     this.questionData = this.quizService.getData();
     if (!this.questionData) {
-      this.quizService.getTopicwiseQuestions(this.router.url).subscribe((data: Array<any>) => {
+      this.quizService.getTopicwiseQuestions(this.router.url).subscribe((data: Array<questionDataInterface>) => {
         this.questionData = data;
         this.quizService.storeData(data);
       });
@@ -50,7 +51,7 @@ export class QuestionsComponent implements OnInit {
 
   onSubmit() {
     this.quizService.storeData(this.questionData);
-    this.mark = this.quizService.markCalculation(this.questionData);
+    this.mark = this.quizService.getResults(this.questionData);
     this.submitValue = true;
     window.localStorage.clear();
   }

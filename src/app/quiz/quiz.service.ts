@@ -7,7 +7,6 @@ import { markDirty } from '@angular/core/src/render3';
 })
 export class QuizService {
   mark: number;
-  responseArray:Array<any> = [];
 
   constructor(private http: HttpClient) { 
       this.mark = 0;
@@ -33,7 +32,7 @@ export class QuizService {
     return JSON.parse(localStorage.getItem('questionData'));
   }
 
-  markCalculation(questionData) {
+  getResults(questionData) {
     this.mark = 0;
     questionData.forEach(element => {
         if(element.type == "text" && element.answer === element.userResponse.toLowerCase()) {

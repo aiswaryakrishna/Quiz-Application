@@ -15,15 +15,15 @@
             </ng-container>
         </div>
         <div class="btn-wrapper">
-            <button *ngIf="counter > 0" class="btn-style" (click)="onPrevious()">Previous</button>
-            <button *ngIf="counter < questionData.length-1" class="btn-style" (click)="onNext()">Next</button>
-            <button *ngIf="counter == questionData.length-1" class="btn-style" (click)="onSubmit()">Submit</button>
+            <button *ngIf="counter > 0" class="btn btn-primary" (click)="onPrevious()">Previous</button>
+            <button *ngIf="counter < questionData.length-1" class="btn btn-success" (click)="onNext()">Next</button>
+            <button *ngIf="counter == questionData.length-1" class="btn btn-success" (click)="onSubmit()">Submit</button>
         </div>
     </div>
 </div>
 
 <ng-template #other_content>
-    <button class="btn-style right-align" routerLink="/">Back</button>
+    <button class="btn btn-success right-align" routerLink="/">Back</button>
     <div class="score-box">
         <div class="score">Your Score is {{ mark }}</div>
     </div>

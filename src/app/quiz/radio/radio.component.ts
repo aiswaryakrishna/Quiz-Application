@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { questionDataInterface } from 'src/app/config/interfaces';
 
 @Component({
   selector: 'radio-type',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./radio.component.css']
 })
 export class RadioComponent implements OnInit {
-  @Input() questionInfo: any;
+  @Input() questionInfo: questionDataInterface;
   
   constructor() { }
 
