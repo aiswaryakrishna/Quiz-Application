@@ -24,4 +24,8 @@ export class CheckboxComponent implements OnInit {
       this.questionInfo.userResponse = this.itemArray;
     }
   }
+
+  trackByFn(index, item) {
+    return index
+  }
 }

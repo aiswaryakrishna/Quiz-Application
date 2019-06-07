@@ -55,8 +55,4 @@ export class QuestionsComponent implements OnInit {
     this.submitValue = true;
     window.localStorage.clear();
   }
-
-  trackByFn(index, item) {
-    return index
-  }
 }

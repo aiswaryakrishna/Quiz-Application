@@ -14,4 +14,7 @@ export class RadioComponent implements OnInit {
   ngOnInit() {
   }
 
+  trackByFn(index, item) {
+    return index
+  }
 }

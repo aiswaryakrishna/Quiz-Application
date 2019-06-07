@@ -7,7 +7,7 @@
     position: relative;
     padding-left: 35px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -24,7 +24,7 @@
 
 .checkmark {
     position: absolute;
-    top: 7px;
+    top: 3px;
     left: 0;
     height: 20px;
     width: 20px;
