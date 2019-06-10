@@ -24,12 +24,20 @@ export class QuizService {
     return this.http.get('./assets/'+fileName);
   }
 
-  storeData(questionData) {
+  storeQuestionInfoInLocalStorage(questionData) {
     localStorage.setItem('questionData', JSON.stringify(questionData));
   }
 
-  getData() {
+  storeScoreInfoInLocalStorage(scoreInfo) {
+    localStorage.setItem('scoreInfo', JSON.stringify(scoreInfo));
+  }
+
+  getQuestionInfoFromLocalStorage() {
     return JSON.parse(localStorage.getItem('questionData'));
+  }
+
+  getScoreInfoFromLocalStorage() {
+    return JSON.parse(localStorage.getItem('scoreInfo'));
   }
 
   getResults(questionData) {

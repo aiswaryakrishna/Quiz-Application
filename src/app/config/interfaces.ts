@@ -5,3 +5,8 @@ export interface questionDataInterface {
     userResponse: any;
     answer: any;
 }
+
+export interface scoreInfoInterface {
+    submitValue: boolean;
+    score: number;
+}

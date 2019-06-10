@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { htmlAstToRender3Ast } from '@angular/compiler/src/render3/r3_template_transform';
-import { questionDataInterface } from '../../config/interfaces';
+import { questionDataInterface, scoreInfoInterface } from '../../config/interfaces';
 
 @Component({
   selector: 'app-quiz',
@@ -18,6 +17,7 @@ export class QuestionsComponent implements OnInit {
   mark: number;
   routerUrl: string;
   submitValue: boolean;
+  scoreInfo: scoreInfoInterface;
 
   constructor(private quizService: QuizService,
     private route: ActivatedRoute,
@@ -27,18 +27,28 @@ export class QuestionsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.questionData = this.quizService.getData();
-    if (!this.questionData) {
-      this.quizService.getTopicwiseQuestions(this.router.url).subscribe((data: Array<questionDataInterface>) => {
-        this.questionData = data;
-        this.quizService.storeData(data);
-      });
+    this.getQuizData();
+  }
+
+  getQuizData() {
+    this.scoreInfo = this.quizService.getScoreInfoFromLocalStorage();
+    if(this.quizService.getScoreInfoFromLocalStorage()) {
+      this.submitValue = this.scoreInfo.submitValue;
+      this.mark = this.scoreInfo.score;
+    } else {
+      this.questionData = this.quizService.getQuestionInfoFromLocalStorage();
+      if (!this.questionData) {
+        this.quizService.getTopicwiseQuestions(this.router.url).subscribe((data: Array<questionDataInterface>) => {
+          this.questionData = data;
+          this.quizService.storeQuestionInfoInLocalStorage(data);
+        });
+      }
     }
   }
 
   onNext() {
     this.counter += 1;
-    this.quizService.storeData(this.questionData);
+    this.quizService.storeQuestionInfoInLocalStorage(this.questionData);
     let id = this.counter + 1;
     this.router.navigate([this.routerUrl + '/' + id]);
   }
@@ -50,9 +60,11 @@ export class QuestionsComponent implements OnInit {
   }
 
   onSubmit() {
-    this.quizService.storeData(this.questionData);
+    this.quizService.storeQuestionInfoInLocalStorage(this.questionData);
     this.mark = this.quizService.getResults(this.questionData);
     this.submitValue = true;
     window.localStorage.clear();
+    this.counter += 1;
+    this.quizService.storeScoreInfoInLocalStorage({submitValue:this.submitValue, score: this.mark});
   }
 }
