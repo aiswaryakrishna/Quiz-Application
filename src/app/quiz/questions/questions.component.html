@@ -1,25 +1,30 @@
 <div *ngIf="!submitValue; else other_content" class="question-wrapper">
-  <div *ngIf="questionData && questionData.length > 0">
+    <div *ngIf="questionData && questionData.length > 0">
         <div class="question-style">
             <span class="question-align"><b>{{ questionData[counter]?.question }}</b></span>
         </div>
-        <div class="option-wrapper"> 
-            <div class="options-style" *ngFor="let option of questionData[counter]?.options; let i = index">
-                <input class="options-style" [id]="i" type="radio" name="option" 
-                [(ngModel)]="questionData[counter].userResponse" [value]="i">{{ option }}
-            </div>
+        <div class="option-wrapper" [ngClass]="{'text-wrapper':questionData[counter]?.type == 'text'}">
+            <ng-container *ngIf="questionData[counter]?.type == 'radio'">
+                <radio-type [questionInfo]="questionData[counter]"></radio-type>
+            </ng-container>
+            <ng-container *ngIf="questionData[counter]?.type == 'text'">
+                <input-text [questionInfo]="questionData[counter]"></input-text>
+            </ng-container>
+            <ng-container *ngIf="questionData[counter]?.type == 'checkbox'">
+                <checkbox-type [questionInfo]="questionData[counter]"></checkbox-type>
+            </ng-container>
         </div>
         <div class="btn-wrapper">
-            <button *ngIf="counter > 0" class="btn-style" (click)="onPrevious()">Previous</button>
-            <button *ngIf="counter < questionData.length-1" class="btn-style" (click)="onNext()">Next</button>
-            <button *ngIf="counter == questionData.length-1" class="btn-style" (click)="onSubmit()">Submit</button>
+            <button *ngIf="counter > 0" class="btn btn-primary" (click)="onPrevious()">Previous</button>
+            <button *ngIf="counter < questionData.length-1" class="btn btn-success" (click)="onNext()">Next</button>
+            <button *ngIf="counter == questionData.length-1" class="btn btn-success" (click)="onSubmit()">Submit</button>
         </div>
     </div>
 </div>
 
 <ng-template #other_content>
-    <button class="btn-style right-align" routerLink="/">Back</button>
+    <button class="btn btn-success right-align" routerLink="/">Back</button>
     <div class="score-box">
-       <div class="score">Your Score is {{ mark }}</div>
+        <div class="score">Your Score is {{ mark }}</div>
     </div>
 </ng-template>

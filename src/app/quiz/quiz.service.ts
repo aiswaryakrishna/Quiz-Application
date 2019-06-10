@@ -7,7 +7,6 @@ import { markDirty } from '@angular/core/src/render3';
 })
 export class QuizService {
   mark: number;
-  responseArray:Array<any> = [];
 
   constructor(private http: HttpClient) { 
       this.mark = 0;
@@ -25,12 +24,33 @@ export class QuizService {
     return this.http.get('./assets/'+fileName);
   }
 
-  storeData(questionData) {
+  storeQuestionInfoInLocalStorage(questionData) {
     localStorage.setItem('questionData', JSON.stringify(questionData));
   }
 
-  getData() {
+  storeScoreInfoInLocalStorage(scoreInfo) {
+    localStorage.setItem('scoreInfo', JSON.stringify(scoreInfo));
+  }
+
+  getQuestionInfoFromLocalStorage() {
     return JSON.parse(localStorage.getItem('questionData'));
-    console.log(localStorage.getItem('questionData'));
+  }
+
+  getScoreInfoFromLocalStorage() {
+    return JSON.parse(localStorage.getItem('scoreInfo'));
+  }
+
+  getResults(questionData) {
+    this.mark = 0;
+    questionData.forEach(element => {
+        if(element.type == "text" && element.answer === element.userResponse.toLowerCase()) {
+          this.mark += 1;
+        } else if(element.userResponse && element.type == "checkbox" && element.answer.toString() === element.userResponse.sort().toString()) {
+          this.mark += 1;
+        } else if(element.answer === element.userResponse) {
+          this.mark += 1;
+        }
+    });
+    return this.mark;
   }
 }

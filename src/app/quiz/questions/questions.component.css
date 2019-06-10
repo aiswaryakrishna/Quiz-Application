@@ -1,5 +1,4 @@
 .question-wrapper {
-    /* background-image: url("../../../assets/quizImage.jpg"); */
     background: #d6ebf2;
     width: 100%;
     height: 100vh;
@@ -10,39 +9,26 @@
 .question-style {
     text-align: center;
     font-size: 35px;
-    padding-top: 6%;
+    padding-top: 4%;
 }
 
 .question-align {
     color: black;
+    font-size: 25px;
 }
 
 .option-wrapper {
-    margin: 6% 15% 2% 15%;
+    margin: 3% 15% 2% 15%;
     padding: 3%;
     background: rgb(233, 244, 245);
 }
 
-.options-style {
-    padding: 3%;
+.text-wrapper {
+    background: #d6ebf2;
 }
 
 .btn-wrapper {
     text-align: center;
-}
-
-.btn-style {
-    padding: 14px 33px;
-    border-radius: 10px;
-    margin: 25px;
-    border: none;
-    background: #44c644;
-    color: white;
-    font-weight: 600;
-    font-size: 15px;
-    width: 130px;
-    cursor: pointer;
-    outline: none;
 }
 
 .score-box {
@@ -66,4 +52,9 @@
 
 .right-align {
     float: right;
+}
+
+.btn {
+    margin: 15px;
+    width: 100px;
 }
