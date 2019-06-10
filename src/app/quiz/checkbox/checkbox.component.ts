@@ -16,13 +16,12 @@ export class CheckboxComponent implements OnInit {
   }
 
   onSelect(value) {
-    if(this.itemArray.indexOf(value) == -1) {
-      this.itemArray.push(value);
-      this.questionInfo.userResponse = this.itemArray;
-    } else {
+    if(this.itemArray.includes(value)) {
       this.itemArray.splice(this.itemArray.indexOf(value), 1);
-      this.questionInfo.userResponse = this.itemArray;
+    } else {
+      this.itemArray.push(value);
     }
+    this.questionInfo.userResponse = this.itemArray;
   }
 
   trackByFn(index, item) {

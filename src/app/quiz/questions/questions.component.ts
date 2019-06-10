@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { questionDataInterface, scoreInfoInterface } from '../../config/interfaces';
 
 @Component({
@@ -23,14 +23,18 @@ export class QuestionsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router) {
     this.route.snapshot.params['id'] ? this.counter = (+this.route.snapshot.params['id']) - 1 : this.counter = 0;
-    this.routerUrl = route.snapshot.url[0].path;
   }
 
   ngOnInit() {
-    this.getQuizData();
+    this.route.paramMap.subscribe(
+      (params: ParamMap) => {
+        this.getQuizData(params.get('topic'));
+        this.routerUrl = this.route.snapshot.url[0].path;
+      }
+    )
   }
 
-  getQuizData() {
+  getQuizData(topic) {
     this.scoreInfo = this.quizService.getScoreInfoFromLocalStorage();
     if(this.quizService.getScoreInfoFromLocalStorage()) {
       this.submitValue = this.scoreInfo.submitValue;
@@ -38,7 +42,7 @@ export class QuestionsComponent implements OnInit {
     } else {
       this.questionData = this.quizService.getQuestionInfoFromLocalStorage();
       if (!this.questionData) {
-        this.quizService.getTopicwiseQuestions(this.router.url).subscribe((data: Array<questionDataInterface>) => {
+        this.quizService.getQuestionData(topic).subscribe((data: Array<questionDataInterface>) => {
           this.questionData = data;
           this.quizService.storeQuestionInfoInLocalStorage(data);
         });

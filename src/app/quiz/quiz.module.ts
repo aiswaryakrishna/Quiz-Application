@@ -11,12 +11,8 @@ import { InputTextComponent } from './input-text/input-text.component';
 
 const routes: Routes = [
   { path: '', component: TopicsComponent },
-  { path: 'angular', component: QuestionsComponent },
-  { path: 'angular/:id', component: QuestionsComponent },
-  { path: 'js', component: QuestionsComponent },
-  { path: 'js/:id', component: QuestionsComponent },
-  { path: 'html', component: QuestionsComponent },
-  { path: 'html/:id', component: QuestionsComponent },
+  { path: ':topic', component: QuestionsComponent },
+  { path: ':topic/:id', component: QuestionsComponent },
   { path: '**', component: TopicsComponent}]
 
 @NgModule({
